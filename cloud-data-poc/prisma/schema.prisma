@@ -1,0 +1,80 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// A. Feeds Data
+model Feed {
+  id            String    @id @default(cuid())
+  feedName      String    @unique
+  sourceSystem  String
+  targetSystem  String
+  protocol      String
+  status        String
+  lastVerified  DateTime?
+  
+  payloads      Payload[]
+  lineageEdges  LineageEdge[]
+  controls      Control[]
+}
+
+// B1. Payloads Data (Feed Content)
+model Payload {
+  id            String    @id @default(cuid())
+  payloadName   String
+  format        String
+  feedId        String
+  feed          Feed      @relation(fields: [feedId], references: [id], onDelete: Cascade)
+  
+  dataElements  DataElement[]
+}
+
+// B2. Data Elements Data (Feed Content)
+model DataElement {
+  id            String    @id @default(cuid())
+  elementName   String
+  dataType      String
+  payloadId     String
+  payload       Payload   @relation(fields: [payloadId], references: [id], onDelete: Cascade)
+}
+
+// C. Lineage Data (Node-Centric)
+model LineageNode {
+  id                  String       @id @default(cuid())
+  nodeName            String       @unique
+  metadata            String?      // Stores JSON of the ~20 columns
+  
+  controls            Control[]
+}
+
+model LineageEdge {
+  id                  String       @id @default(cuid())
+  sourceName          String
+  targetName          String
+  
+  feedId              String?
+  feed                Feed?        @relation(fields: [feedId], references: [id], onDelete: Cascade)
+}
+
+// D. Control Management Data
+model Control {
+  id               String   @id @default(cuid())
+  controlName      String
+  controlType      String
+  description      String?
+  owner            String
+  sla              String?
+  complianceStatus String
+  
+  targetType       String   // e.g., "Data Element", "Report", "System/Asset", "Feed", "Node"
+  targetId         String
+  
+  feedId           String?
+  feed             Feed?        @relation(fields: [feedId], references: [id], onDelete: Cascade)
+  
+  nodeId           String?
+  node             LineageNode? @relation(fields: [nodeId], references: [id], onDelete: Cascade)
+}

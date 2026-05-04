@@ -1,0 +1,4 @@
+hop1_src,hop1_tgt,h1_m3,h1_m4,h1_m5,h1_m6,h1_m7,h1_m8,h1_m9,h1_m10,h1_m11,h1_m12,h1_m13,h1_m14,h1_m15,h1_m16,h1_m17,h1_m18,h1_m19,h1_m20,hop2_src,hop2_tgt,h2_m3,h2_m4,h2_m5,h2_m6,h2_m7,h2_m8,h2_m9,h2_m10,h2_m11,h2_m12,h2_m13,h2_m14,h2_m15,h2_m16,h2_m17,h2_m18,h2_m19,h2_m20
+Salesforce,DataLake,API,Daily,Owner1,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,m16,m17,m18,m19,m20,DataLake,ExecutiveDashboard,Query,Hourly,Owner2,m26,m27,m28,m29,m30,m31,m32,m33,m34,m35,m36,m37,m38,m39,m40
+Stripe,FinanceDB,API,Realtime,Owner3,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,m16,m17,m18,m19,m20,FinanceDB,ExecutiveDashboard,Batch,Daily,Owner4,m26,m27,m28,m29,m30,m31,m32,m33,m34,m35,m36,m37,m38,m39,m40
+SystemA,SystemB,API,Daily,OwnerA,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,m16,m17,m18,m19,m20,SystemB,SystemC,Query,Hourly,OwnerB,m26,m27,m28,m29,m30,m31,m32,m33,m34,m35,m36,m37,m38,m39,m40

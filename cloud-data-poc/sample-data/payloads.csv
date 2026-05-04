@@ -1,0 +1,4 @@
+id,feedId,payloadName,format
+pay1,feed1,Customer Profiles,JSON
+pay2,feed1,Customer Addresses,JSON
+pay3,feed2,Daily Transactions,CSV

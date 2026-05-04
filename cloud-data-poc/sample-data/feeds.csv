@@ -1,0 +1,4 @@
+id,feedName,sourceSystem,targetSystem,protocol,status
+feed1,Customer Data Feed,Salesforce,DataLake,API,Active
+feed2,Transaction Sync,Stripe,FinanceDB,SFTP,Active
+feed3,Employee Sync,Workday,Active Directory,API,Inactive

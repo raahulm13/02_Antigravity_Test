@@ -1,0 +1,6 @@
+id,payloadId,elementName,dataType
+ele1,pay1,customerId,String
+ele2,pay1,firstName,String
+ele3,pay1,lastName,String
+ele4,pay2,billingAddress,String
+ele5,pay3,transactionAmount,Decimal

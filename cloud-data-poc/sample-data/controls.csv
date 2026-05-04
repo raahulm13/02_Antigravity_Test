@@ -1,0 +1,4 @@
+id,controlName,controlType,description,owner,sla,complianceStatus,targetType,targetId,feedName,nodeName
+ctrl1,PII Encryption,Security,Ensure all names are encrypted at rest,Security Team,24h,Compliant,Data Element,ele2,,Salesforce
+ctrl2,Daily Sync Validation,Operational,Ensure daily transaction feed completes,Data Ops,4h,Pending,Feed,feed2,Transaction Sync,
+ctrl3,Address Format Check,Quality,Ensure address is standardized,Data Stewards,12h,Non-Compliant,Payload,pay2,Customer Data Feed,DataLake

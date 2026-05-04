@@ -1,0 +1,6 @@
+id,dataElementId,upstreamSource,downstreamTarget,transformationLogic
+lin1,ele1,Salesforce CRM,Data Lake AWS,Passthrough
+lin2,ele2,Salesforce CRM,Data Lake AWS,ToUpperCase
+lin3,ele5,Stripe API,Finance Oracle DB,Convert USD to EUR
+lin4,,Data Lake AWS,Executive Dashboard,Aggregate Metrics
+lin5,,Finance Oracle DB,Executive Dashboard,Aggregate Revenue
